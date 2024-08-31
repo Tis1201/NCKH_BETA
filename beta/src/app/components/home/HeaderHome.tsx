@@ -1,7 +1,12 @@
-import { Platform, StyleSheet, Text, View, SafeAreaView,Image } from 'react-native'
+import { Platform, StyleSheet, Text, View,Image, Pressable } from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'; 
 
 const HeaderHome = () => {
+  const router = useRouter();
+  const handlePress = () => {
+    router.push('/(stack)/CartScreen'); 
+  };
   return (
     <View style={{
         backgroundColor: '#2980b8',
@@ -54,30 +59,33 @@ const HeaderHome = () => {
             gap:15,
             paddingLeft:10
           }}>
-            <Image 
-              source={require('../../../../assets/img/cart.png')}
-              style={{width: 24, height: 24, position:'relative'}}
-              resizeMode='contain'
-            />
-            <View style={{
-              position: 'absolute',
-              backgroundColor: 'rgba(252,129,65,1)',
-              minWidth: 17,
-              height: 17,
-              borderRadius: 8.5,
-              alignItems: 'center',
-              justifyContent: 'center',
-              top: -8,
-              left: 24,
-              paddingHorizontal: 4,
-            }}>
-              <Text style={{
-                textAlign: 'center',
-                fontSize: 10,
-                color: 'white',
-                fontWeight: 'light'
-              }}>10</Text>
-            </View>
+            <Pressable onPress={handlePress}>
+              <Image 
+                source={require('../../../../assets/img/cart.png')}
+                style={{width: 24, height: 24, position:'relative'}}
+                resizeMode='contain'
+              />
+              <View style={{
+                position: 'absolute',
+                backgroundColor: 'rgba(252,129,65,1)',
+                minWidth: 17,
+                height: 17,
+                borderRadius: 8.5,
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: -8,
+                left: 18,
+                paddingHorizontal: 4,
+              }}>
+                <Text style={{
+                  textAlign: 'center',
+                  fontSize: 10,
+                  color: 'white',
+                  fontWeight: 'light'
+                }}>10</Text>
+              </View>
+
+            </Pressable>
             <View>
               <Image 
                 source={require('../../../../assets/img/chat.png')}

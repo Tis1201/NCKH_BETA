@@ -8,8 +8,7 @@ import ProductSuggest from '../components/home/ProductSuggest'
 const index = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView 
-        
+      <ScrollView         
         contentContainerStyle={{
           flexGrow: 1,
           paddingBottom: 200

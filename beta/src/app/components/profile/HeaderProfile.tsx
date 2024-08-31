@@ -254,6 +254,90 @@ const HeaderProfile = () => {
                         </View>
             </View>
         </View>
+        <View style={{
+            backgroundColor: '#f7f8fb',
+            width: '90%',
+            height: Platform.OS === 'android' ? 70 : 70,
+            position: 'absolute',
+            top: 360,
+            borderRadius: 20,
+            left:20,
+        }}>
+            <View style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                paddingHorizontal: 10,
+                paddingVertical: 5,
+            }}>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 7,
+                    padding: 5,
+                }}>
+                    <Image 
+                        source={require('../../../../assets/img/file.png')}
+                        style={{width: 20, height: 20}}
+                        resizeMode='contain'
+                    />
+                    <Text style={{fontSize: 12}}>Chờ xác nhận</Text>
+                </View>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 7,
+                    padding: 5,
+                }}>
+                    <Image 
+                        source={require('../../../../assets/img/storage-box.png')}
+                        style={{width: 20, height: 20}}
+                        resizeMode='contain'
+                    />
+                    <Text style={{fontSize: 12}}>Chờ lấy hàng</Text>
+                </View>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 7,
+                    padding: 5,
+                }}>
+                    <Image 
+                        source={require('../../../../assets/img/truck.png')}
+                        style={{width: 20, height: 20}}
+                        resizeMode='contain'
+                    />
+                    <Text style={{fontSize: 12}}>Đang giao</Text>
+                </View>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 7,
+                    padding: 5,
+                    position: 'relative',
+                }}>
+                    <Image 
+                        source={require('../../../../assets/img/star.png')}
+                        style={{width: 20, height: 20}}
+                        resizeMode='contain'
+                    />
+                    <Text style={{fontSize: 12}}>Đánh giá</Text>
+                </View>
+                <View style={{
+                    position: 'absolute',
+                    right: 19,
+                    top: 4,
+                    backgroundColor: 'rgba(252,129,65,1)',
+                    minWidth: 17,
+                    height: 17,
+                    borderRadius: 8.5,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                    <Text style={{fontSize: 10, color: 'white'}}>3</Text>
+                </View>
+            </View>
+        </View>
     </View>
   )
 }
